@@ -20,13 +20,14 @@ import com.baomidou.mybatisplus.generator.ConfigGenerator;
 public class ConfigGeneratorTest {
 
 	protected static ConfigGenerator getConfigGenerator() {
+		String basePackage="cn.wdcode.demo";
 		ConfigGenerator cg = new ConfigGenerator();
-		cg.setEntityPackage("com.baomidou.entity");// entity 实体包路径
-		cg.setMapperPackage("com.baomidou.mapper");// mapper 映射文件路径
-		cg.setServicePackage("com.baomidou.service");// service 层路径（可以不写）
-		cg.setXmlPackage("com.baomidou.mapper.xml");// xml层路径（可以不写）
-		cg.setServiceImplPackage("com.baomidou.service.impl");// serviceimpl层路径（可以不写）
-		cg.setControllerPackage("com.baomidou.controller");//controller层路径（可以不写）
+		cg.setEntityPackage(basePackage+".entity");// entity 实体包路径
+		cg.setMapperPackage(basePackage+".mapper");// mapper 映射文件路径
+		cg.setServicePackage(basePackage+".service");// service 层路径（可以不写）
+		cg.setXmlPackage(basePackage+".mapper.xml");// xml层路径（可以不写）
+		cg.setServiceImplPackage(basePackage+".service.impl");// serviceimpl层路径（可以不写）
+		cg.setControllerPackage(basePackage+".controller");//controller层路径（可以不写）
 
 		/* 此处可以配置，自定义 service 及 serviceImpl 子类路径 */
 		//cg.setSuperService("com.xxx.service.IBaseService");
@@ -38,7 +39,8 @@ public class ConfigGeneratorTest {
 		/*
 		 * 生成文件保存位置
 		 */
-		cg.setSaveDir("D:/mybatis-plus/");
+		cg.setSaveDir("D:\\project\\mybatisplus-spring-boot\\mybatisplus-spring-boot\\src\\main\\java\\");
+//		cg.setSaveDir("D:\\project\\mybatis-plus\\mybatis-plus\\src\\main\\java\\");
 
 		/*
 		 * 【实体】是否生成字段常量（默认 false）<br>
